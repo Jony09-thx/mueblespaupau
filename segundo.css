@@ -1,0 +1,50 @@
+body {
+    font-family: 'Arial', sans-serif;
+    text-align: center; /* Centrar contenido */
+    padding: 20px; /* Espacio interior */
+    color: #333; /* Color del texto */
+}
+
+.title {
+    color: brown; 
+    margin-bottom: 20px; /* Espacio inferior */
+}
+
+.logoInicio {
+    width: 200px; /* Ancho del árbol */
+    margin-bottom: 20px; /* Espacio inferior */
+}
+
+.btn {
+    background-color: #e67e22; 
+    color: #fff; /* Texto blanco */
+    border: none; /* Sin borde */
+    padding: 10px 20px; /* Espaciado */
+    font-size: 16px; /* Tamaño de texto */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cambiar cursor */
+    transition: background-color 0.3s ease; /* Efecto de transición */
+    margin: 5px auto; /* Centrar con márgenes automáticos */
+    display: block; /* Hacer que el botón se comporte como un bloque */
+}
+
+.btn:hover {
+    background-color: #d35400; /* Rojo brillante en hover */
+}
+
+.status {
+    margin-top: 20px; /* Espacio superior */
+    padding: 15px; /* Espaciado interior */
+    background-color: #f2f2f2; /* Fondo claro para el estado */
+    border: 2px solid #b30000; /* Borde rojo */
+    border-radius: 10px; /* Bordes redondeados */
+    display: inline-block; /* Bloque en línea */
+}
+
+.profile-image {
+    border-radius: 50%; /* Imagen redondeada */
+    border: 2px solid #b30000; /* Borde rojo alrededor de la imagen */
+    width: 100px; /* Ancho de la imagen */
+    height: 100px; /* Alto de la imagen */
+}
+

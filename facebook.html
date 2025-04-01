@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio Sesión Facebook</title>
+    <link rel="shortcut icon" href="./imagenes/logo.jpg">
+    <link rel="stylesheet" href="segundo.css">
+    <link rel="stylesheet" href="estilos.css"> 
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet"> <!-- Incluir la fuente -->
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="./imagenes/logo.jpg" alt="">
+            <h1>Inicio de sesión</h1>
+          </div>
+        <nav>
+            <a href="./facebook.html" class="link_nav active">Inicio de sesión</a>
+            <a href="./catalogo.html" class="link_nav" id="home">Catálogo</a>
+            <a href="./ubicacion.html" class="link_nav">Ubicación</a>
+            <a href="./carrito.html" class="link_nav">Mi carrito</a>
+            <a href="./stream.html" class="link_nav">Stream</a>
+        </nav>
+    </header>
+    <div id="fb-root"></div>
+
+    <div class="container">
+            <h1 class="title">¡INICIA CON FACEBOOK!</h1>
+            <img src="./imagenes/logo.jpg" alt="" class="logoInicio">
+            <button id="btn-login" class="btn">INICIAR SESIÓN</button>
+        
+    </div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v16.0&appId=TU_ID_DE_APP"></script>        <script>
+        window.fbAsyncInit = function() {
+            FB.init({
+                appId: '1175325257095968',
+                cookie: true,
+                xfbml: true,
+                version: 'v16.0'
+            });
+
+            FB.AppEvents.logPageView();
+            document.getElementById('btn-login').addEventListener('click', function() {
+                FB.login(function(response) {
+                    if (response.authResponse) {
+                        FB.api('/me', { fields: 'name,email,picture.type(large)' }, function(response) {
+                            document.getElementById('user-name').textContent = response.name;
+                            document.getElementById('user-image').src = response.picture.data.url;
+                            document.getElementById('user-email').textContent = response.email;
+                            document.getElementById('status').style.display = 'block';
+
+                             // Ocultar el botón de iniciar sesión
+                            document.getElementById('btn-login').style.display = 'none';
+                        });
+                    } else {
+                        alert('El usuario canceló el inicio de sesión.');
+                    }
+                }, {scope: 'public_profile,email'});
+            });
+
+            document.getElementById('btn-logout').addEventListener('click', function() {
+                FB.logout(function(response) {
+                    document.getElementById('status').style.display = 'none';
+                    // Mostrar el botón de iniciar sesión nuevamente
+                    document.getElementById('btn-login').style.display = 'block';
+                });
+            });
+        };
+        </script>   
+</body>
+</html>

@@ -1,0 +1,123 @@
+body{
+    font-family: 'Courier New';
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+    color: #333;
+}
+
+h2{
+    font-size: 1.5rem;
+    color: brown;
+    margin: 10px;
+}
+.catalogo{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.producto{
+    background-color: white;
+    border: 1px;
+    border-radius: 8px;
+    width: 300px;
+    text-align: center;
+    padding: 15px;
+}
+.producto img {
+    width: 100%; /* Imagen se adapta al ancho */
+    max-width: 200px; /* Ancho máximo */
+    border-radius: 8px; /* Bordes redondeados */
+  }
+
+.precio{
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #803414;
+}
+
+p{
+    font-size: 1rem;
+    margin: 10px 0;
+}
+
+
+.producto button {
+    background-color: #e67e22; /* Naranja llamativo */
+    color: #fff; /* Texto blanco */
+    font-size: 14px;
+    font-weight: bold;
+    padding: 10px 20px; /* Tamaño del botón */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cursor de mano */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+    transition: all 0.3s ease; /* Transición suave */
+  }
+  
+  .producto button:hover {
+    background-color: #d35400; /* Naranja más oscuro al pasar el mouse */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); /* Sombra más marcada */
+    transform: translateY(-2px); /* Eleva el botón */
+  }
+  
+  .producto button:active {
+    background-color: #c0392b; /* Rojo oscuro al presionar */
+    transform: translateY(0); /* Restablece la elevación */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra original */
+  }
+
+
+  /* Estilo para el encabezado */
+header {
+    background-color: brown;
+    color: white;
+    display: flex;
+    justify-content: space-between;   
+    text-align: center;
+    padding: 20px;
+}
+
+/* Estilo para el título */
+header h1 {
+    font-size: 24px;
+    color: white;
+}
+
+/* Estilo para la navegación */
+nav {
+    display: flex;
+    gap: 20px;
+}
+
+/* Estilo para los enlaces de navegación */
+.link_nav {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+/* Cambia de color al pasar el cursor */
+.link_nav:hover {
+    color: #e67e22;
+}
+
+/* Resaltar el enlace activo */
+.link_nav.active {
+    color: #3d1808;
+    border-bottom: 2px solid #3d1808;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+}
+.logo img{
+    height: 63px;
+    margin-right: 10px;
+}
